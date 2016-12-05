@@ -21,5 +21,14 @@ app.controller('mainCtrl', function($scope, $uibModal){
 });
 
 app.controller('navCtrl', function($scope, $uibModal){
+
 	$scope.items = ['About Me', 'Resume', 'Projects', 'CSE 300', 'Contact Me'];
+
+	$scope.changeColor = function(item, bool){
+		if(bool === true){
+			$scope.personColour = {color: 'red'};
+		}else if(bool === false){
+			$scope.personColour = {color: 'blue'};
+		}
+	}
 })

@@ -1,17 +1,24 @@
 @charset "utf-8";
 /* Global Styles */
 
-
+#navigation_bar{
+	list-style-type: none;
+	position: fixed;
+	left: 5%;
+	z-index: 1;
+}
 #navigation_bar li {
-		font-family: 'Gloria Hallelujah', cursive;
+	list-style-type: none;
+    font-family: 'Architects Daughter', cursive;
 	font-size: 20px;
-    display: inline;
-    padding: 15px;
-
-	
+    line-height: 2;	
 }
 
-	#header,
+#navigation_bar li a:hover{
+	cursor:pointer;
+	color: #FFF0DC;
+}
+
 	#footer {
 		background-color: #f1f1f1;
 	}
@@ -30,21 +37,19 @@
 	
 	/* sizes */
 	#main-wrap > div {
-		min-height: 450px;
+		height: 100%;
 	}
 	
-	
-	#header,
+
 	#footer {
 		min-height: 40px;
 	}
 	
 	
 
-	#main-wrap > div { min-height: 450px; }
+	#main-wrap > div {height: 100%; }
 	
-	
-	#header,
+
 	#footer {
 	    min-height: 40px;
 	}
@@ -58,12 +63,12 @@
 	
 	#sidebar {
 	    float: left;
-	    width: 30%;
+	    width: 20%;
 	}
 	
 	#content-wrap {
 	    float: right;
-	    width: 70%;
+	    width: 80%;
 	}  
 	
 	
@@ -79,6 +84,7 @@
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 3;
 }
 
 .ng-hide {

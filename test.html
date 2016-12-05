@@ -18,11 +18,15 @@
 	   <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.3.0.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet"> 
 	<link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
+
+
 </head>
 
 <body ng-app = "myapp">
 
-<div class="cover" ng-controller = "coverCtrl" ng-hide = "hideCover = true">
+<div class="cover" ng-controller = "coverCtrl" ng-hide = "hideCover">
 
 	<h1 class="greeting">Welcome to my personal website! <p>Hope you enjoy it.</p> </h1>
 
@@ -31,22 +35,91 @@
 
 
 <!-- Header content -->
-<div id="header">Header</div>
+
   <div id="main-wrap">
-    <div id="sidebar">Left Nav</div>
-    <div id="content-wrap">Content</div>
+    <div id="sidebar">
+        <div class ="navigation" ng-controller = "navCtrl">
+          <ul id="navigation_bar" style="list-style-type: disc">
+            <li id="tabs" ng-repeat= "i in items " scroll-on-click ng-style="personColour" ng-mouseenter="changeColor(i,true)" ng-mouseleave="changeColor(i,false)">
+              <a>{{i}}</a>
+            </li>
+          </ul>
+  <div class="profilePhoto"> 
+    <!-- Profile photo --> 
+    <img src="AboutPageAssets/images/profilephoto.png" alt="sample"> </div>
+    
+    </div>
+
+    </div>
+    <div id="content-wrap">    <p>Wenjun Qu 109113058
+PHY 134, Section: 5
+11/29/16
+Lab 9 introduction
+
+  In this lab, we will be doing experiments about the resonance in an LRC series circuit. A resonance is a natural frequency of vibration of a vibrating object. By studying resonance, we will be able to analyze music and musical instruments. In a LRC series circuit, the resonance occurs when the inductive and capacitive reactance are equal in magnitude but cancel each other because they are 180 degrees apart in phase. Some of the real life applications of resonance include, microwaves and resonance of sound waves. When people use microwave to cook food, the microwave strikes a water molecule, resonance causes the molecule to align with the direction of the wave. The objectives of the experiment are: compare the theoretical and experimental resonant frequencies in a LRC circuit; understand voltage behaviors across the three different electrical components and compare them to theoretical predictions; measure phase difference between component voltage output and input voltage; gain a pragmatic understanding of frequency response in AC series circuits. Based on the objective of the lab, some of the hypothesis we have about the experiment are: the theoretical and experimental resonant frequencies should be similar; when we interchange the resistor and capacitor, the amplitude of the capacitor voltage at resonance should not be larger than the input voltage. However, when we interchange the capacitor and the inductor, the amplitude of the inductor voltage at resonance should be larger than the input voltage. The relevant equations used in this lab are:
+ω_0=1/√LC  to caculate the resonant frequency.
+V(t)=I(t)R+q(t)/C+L D/DT I(t)
+The phase of the wave can be calculated using tan^(-1)⁡〖[(X_L-X_C)/R]〗 
+</p>    <p>Wenjun Qu 109113058
+PHY 134, Section: 5
+11/29/16
+Lab 9 introduction
+
+  In this lab, we will be doing experiments about the resonance in an LRC series circuit. A resonance is a natural frequency of vibration of a vibrating object. By studying resonance, we will be able to analyze music and musical instruments. In a LRC series circuit, the resonance occurs when the inductive and capacitive reactance are equal in magnitude but cancel each other because they are 180 degrees apart in phase. Some of the real life applications of resonance include, microwaves and resonance of sound waves. When people use microwave to cook food, the microwave strikes a water molecule, resonance causes the molecule to align with the direction of the wave. The objectives of the experiment are: compare the theoretical and experimental resonant frequencies in a LRC circuit; understand voltage behaviors across the three different electrical components and compare them to theoretical predictions; measure phase difference between component voltage output and input voltage; gain a pragmatic understanding of frequency response in AC series circuits. Based on the objective of the lab, some of the hypothesis we have about the experiment are: the theoretical and experimental resonant frequencies should be similar; when we interchange the resistor and capacitor, the amplitude of the capacitor voltage at resonance should not be larger than the input voltage. However, when we interchange the capacitor and the inductor, the amplitude of the inductor voltage at resonance should be larger than the input voltage. The relevant equations used in this lab are:
+ω_0=1/√LC  to caculate the resonant frequency.
+V(t)=I(t)R+q(t)/C+L D/DT I(t)
+The phase of the wave can be calculated using tan^(-1)⁡〖[(X_L-X_C)/R]〗 
+</p>    <p>Wenjun Qu 109113058
+PHY 134, Section: 5
+11/29/16
+Lab 9 introduction
+
+  In this lab, we will be doing experiments about the resonance in an LRC series circuit. A resonance is a natural frequency of vibration of a vibrating object. By studying resonance, we will be able to analyze music and musical instruments. In a LRC series circuit, the resonance occurs when the inductive and capacitive reactance are equal in magnitude but cancel each other because they are 180 degrees apart in phase. Some of the real life applications of resonance include, microwaves and resonance of sound waves. When people use microwave to cook food, the microwave strikes a water molecule, resonance causes the molecule to align with the direction of the wave. The objectives of the experiment are: compare the theoretical and experimental resonant frequencies in a LRC circuit; understand voltage behaviors across the three different electrical components and compare them to theoretical predictions; measure phase difference between component voltage output and input voltage; gain a pragmatic understanding of frequency response in AC series circuits. Based on the objective of the lab, some of the hypothesis we have about the experiment are: the theoretical and experimental resonant frequencies should be similar; when we interchange the resistor and capacitor, the amplitude of the capacitor voltage at resonance should not be larger than the input voltage. However, when we interchange the capacitor and the inductor, the amplitude of the inductor voltage at resonance should be larger than the input voltage. The relevant equations used in this lab are:
+ω_0=1/√LC  to caculate the resonant frequency.
+V(t)=I(t)R+q(t)/C+L D/DT I(t)
+The phase of the wave can be calculated using tan^(-1)⁡〖[(X_L-X_C)/R]〗 
+</p>    <p>Wenjun Qu 109113058
+PHY 134, Section: 5
+11/29/16
+Lab 9 introduction
+
+  In this lab, we will be doing experiments about the resonance in an LRC series circuit. A resonance is a natural frequency of vibration of a vibrating object. By studying resonance, we will be able to analyze music and musical instruments. In a LRC series circuit, the resonance occurs when the inductive and capacitive reactance are equal in magnitude but cancel each other because they are 180 degrees apart in phase. Some of the real life applications of resonance include, microwaves and resonance of sound waves. When people use microwave to cook food, the microwave strikes a water molecule, resonance causes the molecule to align with the direction of the wave. The objectives of the experiment are: compare the theoretical and experimental resonant frequencies in a LRC circuit; understand voltage behaviors across the three different electrical components and compare them to theoretical predictions; measure phase difference between component voltage output and input voltage; gain a pragmatic understanding of frequency response in AC series circuits. Based on the objective of the lab, some of the hypothesis we have about the experiment are: the theoretical and experimental resonant frequencies should be similar; when we interchange the resistor and capacitor, the amplitude of the capacitor voltage at resonance should not be larger than the input voltage. However, when we interchange the capacitor and the inductor, the amplitude of the inductor voltage at resonance should be larger than the input voltage. The relevant equations used in this lab are:
+ω_0=1/√LC  to caculate the resonant frequency.
+V(t)=I(t)R+q(t)/C+L D/DT I(t)
+The phase of the wave can be calculated using tan^(-1)⁡〖[(X_L-X_C)/R]〗 
+</p>    <p>Wenjun Qu 109113058
+PHY 134, Section: 5
+11/29/16
+Lab 9 introduction
+
+  In this lab, we will be doing experiments about the resonance in an LRC series circuit. A resonance is a natural frequency of vibration of a vibrating object. By studying resonance, we will be able to analyze music and musical instruments. In a LRC series circuit, the resonance occurs when the inductive and capacitive reactance are equal in magnitude but cancel each other because they are 180 degrees apart in phase. Some of the real life applications of resonance include, microwaves and resonance of sound waves. When people use microwave to cook food, the microwave strikes a water molecule, resonance causes the molecule to align with the direction of the wave. The objectives of the experiment are: compare the theoretical and experimental resonant frequencies in a LRC circuit; understand voltage behaviors across the three different electrical components and compare them to theoretical predictions; measure phase difference between component voltage output and input voltage; gain a pragmatic understanding of frequency response in AC series circuits. Based on the objective of the lab, some of the hypothesis we have about the experiment are: the theoretical and experimental resonant frequencies should be similar; when we interchange the resistor and capacitor, the amplitude of the capacitor voltage at resonance should not be larger than the input voltage. However, when we interchange the capacitor and the inductor, the amplitude of the inductor voltage at resonance should be larger than the input voltage. The relevant equations used in this lab are:
+ω_0=1/√LC  to caculate the resonant frequency.
+V(t)=I(t)R+q(t)/C+L D/DT I(t)
+The phase of the wave can be calculated using tan^(-1)⁡〖[(X_L-X_C)/R]〗 
+</p>    <p>Wenjun Qu 109113058
+PHY 134, Section: 5
+11/29/16
+Lab 9 introduction
+
+  In this lab, we will be doing experiments about the resonance in an LRC series circuit. A resonance is a natural frequency of vibration of a vibrating object. By studying resonance, we will be able to analyze music and musical instruments. In a LRC series circuit, the resonance occurs when the inductive and capacitive reactance are equal in magnitude but cancel each other because they are 180 degrees apart in phase. Some of the real life applications of resonance include, microwaves and resonance of sound waves. When people use microwave to cook food, the microwave strikes a water molecule, resonance causes the molecule to align with the direction of the wave. The objectives of the experiment are: compare the theoretical and experimental resonant frequencies in a LRC circuit; understand voltage behaviors across the three different electrical components and compare them to theoretical predictions; measure phase difference between component voltage output and input voltage; gain a pragmatic understanding of frequency response in AC series circuits. Based on the objective of the lab, some of the hypothesis we have about the experiment are: the theoretical and experimental resonant frequencies should be similar; when we interchange the resistor and capacitor, the amplitude of the capacitor voltage at resonance should not be larger than the input voltage. However, when we interchange the capacitor and the inductor, the amplitude of the inductor voltage at resonance should be larger than the input voltage. The relevant equations used in this lab are:
+ω_0=1/√LC  to caculate the resonant frequency.
+V(t)=I(t)R+q(t)/C+L D/DT I(t)
+The phase of the wave can be calculated using tan^(-1)⁡〖[(X_L-X_C)/R]〗 
+</p>    <p>Wenjun Qu 109113058
+PHY 134, Section: 5
+11/29/16
+Lab 9 introduction
+
+  In this lab, we will be doing experiments about the resonance in an LRC series circuit. A resonance is a natural frequency of vibration of a vibrating object. By studying resonance, we will be able to analyze music and musical instruments. In a LRC series circuit, the resonance occurs when the inductive and capacitive reactance are equal in magnitude but cancel each other because they are 180 degrees apart in phase. Some of the real life applications of resonance include, microwaves and resonance of sound waves. When people use microwave to cook food, the microwave strikes a water molecule, resonance causes the molecule to align with the direction of the wave. The objectives of the experiment are: compare the theoretical and experimental resonant frequencies in a LRC circuit; understand voltage behaviors across the three different electrical components and compare them to theoretical predictions; measure phase difference between component voltage output and input voltage; gain a pragmatic understanding of frequency response in AC series circuits. Based on the objective of the lab, some of the hypothesis we have about the experiment are: the theoretical and experimental resonant frequencies should be similar; when we interchange the resistor and capacitor, the amplitude of the capacitor voltage at resonance should not be larger than the input voltage. However, when we interchange the capacitor and the inductor, the amplitude of the inductor voltage at resonance should be larger than the input voltage. The relevant equations used in this lab are:
+ω_0=1/√LC  to caculate the resonant frequency.
+V(t)=I(t)R+q(t)/C+L D/DT I(t)
+The phase of the wave can be calculated using tan^(-1)⁡〖[(X_L-X_C)/R]〗 
+</p></div>
   </div>
   <div id="footer">Footer</div>
 
 
-  <div class ="navigation" ng-controller = "navCtrl">
-  	<ul id="navigation_bar" style="list-style-type: disc">
-  		<li id="tabs" ng-repeat= "i in items " scroll-on-click>
-  			<a>{{i}}</a>
-		</li>
-	  </ul>
-	  
-	</div>
+
 
 	<br></br>
 
