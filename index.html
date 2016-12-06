@@ -12,60 +12,373 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
-	<script src="javascripts/main.js"></script>
-	 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.js"></script>
-	   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-sanitize.js"></script>
-	   <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.3.0.js"></script>
+  <script src="javascripts/main.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-sanitize.js"></script>
+     <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.3.0.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet"> 
-	<link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cardo" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
+
 
 </head>
 
 <body ng-app = "myapp">
 
-<div class="cover" ng-controller = "coverCtrl" ng-hide = "hideCover = true">
+<div class="cover" ng-controller = "coverCtrl" ng-hide = "hideCover">
 
-	<h1 class="greeting">Welcome to my personal website! <p>Hope you enjoy it.</p> </h1>
+  <h1 class="greeting">Welcome to my personal website! <p>Hope you enjoy it.</p> </h1>
 
-	<button class = "btn btn-primary center-block" id = "coverBut" ng-click="hide()"> Enter!</button>
+  <button class = "btn btn-primary center-block" id = "coverBut" ng-click="hide()"> Enter!</button>
 </div>
 
 
 <!-- Header content -->
+    <script type = "text/ng-template" id="aboutMe.html">
+    <div class ="aboutMeContainer" >
+    <h1>About Me</h1>
+    <hr></hr>
+    <p>Hi! I'm Wenjun! I'm currently a senior undergraduate student in Stony Brook University studying Computer Science. As a transfer student, this is my second year in Stony Brook! While enjoying my life in Stony Brook, I also missed my friends in my old school, SUNYIT. I came to United States when I was 13 and worked all my way to here. In daily life, I'm a very easygoing person who enjoy spending time with my friends. I try to keep stuff as simple as possible. Which is the main concept of this website. Finally, nice to meet you! </p>
+    <p><br>The world is not beautiful, therefore it is.<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp---Kino's Journey</p>
+    </div>
+
+    </script>
+
+        <script type = "text/ng-template" id="Resume.html">
+    <div class = "resumeContainer">
+    <h1>  Here is my Resume! </h1>
+      <embed id = "pdfEmbed" src="Resume.pdf" type='application/pdf'>
+    </div>
+
+    </script>
+
+        <script type = "text/ng-template" id="projects.html">
+    <div class ="projectContainer" ng-controller="mainCtrl">
+    <h1>Projects</h1>    <hr></hr>
+    <p  style="margin-left: 40px"> In progress</p>    <hr></hr>
+    <img class = "ProjectImg" ng-src="images/notfb+.png" ng-click="openNotfb()">
+
+    <p style="margin-left: 40px">Completed</p>
+    <hr></hr>
+
+    <img class = "ProjectImg" ng-src="images/scrimish.jpg" ng-click="openScrimish()">
+    <img class = "ProjectImg" ng-src="images/seawolf.png" ng-click="openSeawolf()">
+    <img class = "ProjectImg" ng-src="images/eport.jpg" ng-click="openEportfolio()">
+    <img class = "ProjectImg" ng-src="images/miniAT.png" ng-click="openKiosk()">
 
 
+    </div>
+
+    </script>
+
+    <script type = "text/ng-template" id="Resume.html">
+    <div class = "resumeContainer">
+    <h1>  Here is my Resume! </h1>
+      <embed id = "pdfEmbed" src="Resume.pdf" type='application/pdf'>
+    </div>
+
+    </script>
+
+        <script type = "text/ng-template" id="scrimish.html">
+    <div class ="notFBContainer" >
+    <h1>Not FB+</h1>    
+    <img class = "ProjectImg" ng-src="images/scrimish.jpg" >
+    <div class = "projectInfo">
+      <p>Project Title: Scrimish+</p>
+      <p>Skills: Java</p>
+      <p>Progress: 100%</p>
+      <p>Creation Date: Oct 13, 2016</p>
+      <p>Description: </p>
+      <p>Scrimish is a fast moving card game that pits player against player in an epic 10 minute battle of strategy, memory, and misdirection. Every game is different and youll want to play over and over again to try new ways of outsmarting your opponent. The game is expandable to large team or free-for-all games. 
+      </p>
+      <p>
+        This Java version of Scrimish allows user to play with computer during free time.
+      </p>
+      <button id = "nav_but" type="button" class  ="btn btn-default" onclick = "window.location.href= 'https://bitbucket.org/wqu1995/scrimish'">Check Out in Bitbucket!</button>
+      <br></br>
+    </div>
+    </div>
+    </script>
+
+            <script type = "text/ng-template" id="Seawolf.html">
+    <div class ="notFBContainer" >
+    <h1>Not FB+</h1>    
+    <img class = "ProjectImg" ng-src="images/seawolf.png" >
+    <div class = "projectInfo">
+      <p>Project Title: Seawolf Script</p>
+      <p>Skills: Python, PLY</p>
+      <p>Progress: 100%</p>
+      <p>Creation Date: Nov 12, 2016</p>
+      <p>Description: </p>
+      <p>
+        A custom scripting language that was written in Python with extension of ply library. It can perform most of the basic arithmetic and logic calculations. It also support if and else conditions. Final project of CSE 307 in summer 2016 semester.
+        </p>
+              <button id = "nav_but" type="button" class  ="btn btn-default" onclick = "window.location.href= 'https://bitbucket.org/wqu1995/seawolfscript'">Check Out in Bitbucket!</button>
+      <br></br>
+
+    </div>
+    </div>
+    </script>
+
+            <script type = "text/ng-template" id="eportfolio.html">
+    <div class ="notFBContainer" >
+    <h1>Not FB+</h1>    
+    <img class = "ProjectImg" ng-src="images/eport.jpg">
+    <div class = "projectInfo">
+      <p>Project Title: ePortfolio Generator</p>
+      <p>Skills: JavaFX, Json, HTML, JQuery, CSS, XML</p>
+      <p>Progress: 100%</p>
+      <p>Creation Date: Nov 18, 2015</p>
+      <p>Description: </p>
+      <p>
+For Debugging Enterprises, the goal is to first make an application that Stony Brook University students of all majors might like to use and then to extend it to students at other schools. Therefore it is important to make good design decisions in this project that will result in reusable components that can accommodate all sorts of content as needed by many different types of students. As such, a framework (or set of frame works), could be designed and constructed to be used to make The ePortfolio Generator a living piece of software that can easily accommodate change. Note that Java is the target language for this software design.
+  Final Project for CSE 219 in Fall,2015 Semester
+</p>
+ <button id = "nav_but" type="button" class  ="btn btn-default" onclick = "window.location.href= 'https://bitbucket.org/wqu1995/eportfoliogeneratorui'">Check Out in Bitbucket!</button>
+      <br></br>
+    </div>
+    </div>
+    </script>
+
+            <script type = "text/ng-template" id="kiosk.html">
+    <div class ="notFBContainer" >
+    <h1>Not FB+</h1>    
+    <img class = "ProjectImg" ng-src="images/miniAT.png" >
+    <div class = "projectInfo">
+      <p>Project Title: MiniAT Kiosk</p>
+      <p>Skills: C, MiniAT Assembly, SDL2</p>
+      <p>Progress: 100%</p>
+      <p>Creation Date: Feb 18, 2015</p>
+      <p>Description: </p>
+      <p>
+MiniAT Kiosk provides a method to replicate the functionality of a physical kiosk in MiniAT.
+
+MiniAT Kiosk provides the following peripherals:
+
+    Screen
+    Keypad
+    Receipt Printer
+    It is a C application that uses MiniAT as the virtual microprocessor process data.
+
+
+</p>
+<button id = "nav_but" type="button" class  ="btn btn-default" onclick = "window.location.href= 'https://bitbucket.org/miniat_amos/kiosk'">Check Out in Bitbucket!</button>
+      <br></br>
+    </div>
+    </div>
+    </script>
+
+            <script type = "text/ng-template" id="notFB.html">
+    <div class ="notFBContainer" >
+    <h1>Not FB+</h1>    
+    <img class = "ProjectImg" ng-src="images/notfb+.png" ng-click="openNotfb()">
+    <div class = "projectInfo">
+      <p>Project Title: Not FB+</p>
+      <p>Skills: MySQL, Node.js, AngularJS, HTML, CSS</p>
+      <p>Progress: 50%</p>
+      <p>Creation Date: Nov 18, 2016</p>
+      <p>Description: </p>
+      <p>
+  You are to work in teams of two or three. This is due to the breath and depth of the social networking project. We will spend some time in class this week to build the teams. Many times in industry you have to work with other people and you must develop your skills to work well in a random team. Therefore, I assigned you team members in alphabetical order (you may or may not know your team members). During your midterm exam 1 (when you will be seated in alphabetical order), I recommend that you exchange email contact information with your team members and schedule a time to meet during the following week to work together on starting the project. There are several places to meet in our campus and I can recommend a few: the New Computer Science building Commuter Lounges in rooms 106 and 108, NCS upstairs lobby and meeting areas on the corridor sides, the old Computer Science building Transaction Labs, Main Library reading rooms, SINC sites, etc.
+</p>
+    </div>
+    </div>
+    </script>
+
+    </script>
+
+        <script type = "text/ng-template" id="skill.html">
+    <div class ="skillContainer" >
+    <h1>Skills</h1>    <hr></hr>
+    <p  style="margin-left: 40px"> Programming languages: C, C++, C#, Java, Python</p>
+    <p  style="margin-left: 40px"> Web Client side skills: HTML, CSS, JavaScripts (JQuery, AngularJS)</p>
+    <p  style="margin-left: 40px"> Web Server side skills: MySQL, PHP, Node.js</p>
+    <p  style="margin-left: 40px"> Operating Systems: Windows, Linux/Unix</p>
+    <p  style="margin-left: 40px"> Natural languages: English, Chinese, Japanese</p>
+    </div>
+
+    </script>
+
+
+        <script type = "text/ng-template" id="cover.html">
+    <div class = "CSE300Container">
+    <h1>Title: CoverLetter</h1>
+
+      <embed id = "pdfEmbed" src="CSE300/cover.pdf" type='application/pdf'>
+    </div>
+
+    </script>
+            <script type = "text/ng-template" id="user.html">
+    <div class = "CSE300Container">
+    <h1>Title: User Instruction</h1>
+
+      <embed id = "pdfEmbed" src="CSE300/user.pdf" type='application/pdf'>
+    </div>
+
+    </script>
+            <script type = "text/ng-template" id="literature.html">
+    <div class = "CSE300Container">
+    <h1>Title: Literature Review</h1>
+
+      <embed id = "pdfEmbed" src="CSE300/literature.pdf" type='application/pdf'>
+    </div>
+
+    </script>
+            <script type = "text/ng-template" id="research.html">
+    <div class = "CSE300Container">
+    <h1>Title: Research Proposal</h1>
+
+      <embed id = "pdfEmbed" src="CSE300/research.pdf" type='application/pdf'>
+    </div>
+
+    </script>
+            <script type = "text/ng-template" id="news.html">
+    <div class = "CSE300Container">
+    <h1>Title: News Release</h1>
+
+      <embed id = "pdfEmbed" src="CSE300/news.pdf" type='application/pdf'>
+    </div>
+
+    </script>
+
+    </script>
+            <script type = "text/ng-template" id="contact.html">
+    <div class = "contactContainer" ng-controller="mainCtrl">
+        <div>
+      <ul class="socialContainer">
+        <li>
+          <a class="image-w"onclick = "window.location.href= 'https://www.linkedin.com/in/wenjun-qu-27bb2b126?trk=nav_responsive_tab_profile_pic'">         <img alt="thumbnail"
+               src="images/linkin.svg"  />
+        </li>
+                <li>
+          <a class="image-w"onclick = "window.location.href= 'https://github.com/wqu1995'">              <img alt="thumbnail"
+               src="images/github.png"  /></a>
+        </li>
+                <li>
+          <a class="image-w"onclick = "window.location.href= 'https://bitbucket.org/wqu1995/'">              <img alt="thumbnail"
+               src="images/bitbucket.png"  /></a>
+        </li>
+      </ul>
+    </div>
+    <h1>Want to contact me? :)</h1> <hr></hr>
+
+  <p>Phone number: (123)456-7890</P>
+  <p>Email: Wenjun.Qu@stonybrook.edu</P>
+  <p>Address: 450 Circle RD<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Stony Brook, New York 11790</P>
+<br>
+  <div class="message">
+  <p>Or Leave a message! :)</p>
+  <p>{{Info}}</p>
+
+     <label for="GroupName"  > Email: </label>
+      <input name= "groupName" type="text" id="groupName" placeholder="Your Email">
+           <label for="GroupName"  > Name: </label>
+      <input name= "groupName" type="text" id="groupName" placeholder="Your Name">
+      <br>
+           <label for="GroupName"  > Content: </label> <br>
+      <input name= "groupName" type="text" id="contentArea" placeholder="What do you want to tell me?">
   
-  <div class ="navigation" ng-controller = "navCtrl">
-  	<ul id="navigation_bar" style="list-style-type: disc">
-  		<li id="tabs" ng-repeat= "i in items " scroll-on-click>
-  			<a>{{i}}</a>
-		</li>
-	  </ul>
-	  
-	</div>
-	<br></br>
-	
-  <div class="profilePhoto"> 
-    <!-- Profile photo --> 
-    <img src="AboutPageAssets/images/profilephoto.png" alt="sample"> </div>
-    
-  <!-- Identity details -->
-  <section class="profileHeader">
-    <h1>Wenjun Qu</h1>
-	  <h3>	The World is not Beautiful, Therefore it is.</h3>
-    <hr>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in.</p>
-	      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in.</p>    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in.</p>    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in.</p>    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in.</p>    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in.</p>    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in.</p>    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in.</p>    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in.</p>
-  </section>
-  <!-- Links to Social network accounts -->
-	<br></br>
+          <button id = "sendMsg" type="button" class  ="btn btn-default" ng-click="sub()">Send!</button>
+          <br></br>
+  </div>
 
-<footer>
-  <hr>
-  <p class="footerDisclaimer">2014  Copyrights - <span>All Rights Reserved</span></p>
-  <p class="footerNote"><a href="mailto:wenjun.qu@stonybrook.edu">Email me</a></p>
-</footer>
+
+</a>
+              
+    </div>
+
+    </script>
+
+
+    <script type = "text/ng-template" id="CSE300.html">
+    <div class ="skillContainer" >
+    <h1>Works done in CSE 300</h1> <hr></hr>
+      <ul class = "CSE300List">
+          <li>
+             <a  class="image-w" ng-click= "openCover()">
+              <img alt="thumbnail"
+               src="images/pdf.png"  />
+      
+           <div class="CSE300cover">
+            <h3>Cover Letter</h3>
+            </div>
+          </a>
+  </li>
+
+            <li>
+             <a  class="image-w" ng-click= "openUser()">
+              <img alt="thumbnail" 
+               src="images/pdf.png" />
+      
+           <div class="CSE300cover">
+            <h3>User Instructions</h3>
+            </div>
+          </a>
+  </li>
+
+            <li>
+             <a  class="image-w" ng-click= "openLiterature()">
+              <img alt="thumbnail"
+               src="images/pdf.png" />
+      
+           <div class="CSE300cover">
+            <h3>Literature Review</h3>
+            </div>
+          </a>
+  </li>
+
+            <li>
+             <a  class="image-w" ng-click= "openResearch()">
+              <img alt="thumbnail"
+               src="images/pdf.png" />
+      
+           <div class="CSE300cover">
+            <h3>Research Proposal</h3>
+            </div>
+          </a>
+  </li>
+
+            <li>
+             <a  class="image-w" ng-click= "openNews()">
+              <img alt="thumbnail"
+               src="images/pdf.png" />
+      
+           <div class="CSE300cover">
+            <h3>News Release</h3>
+            </div>
+          </a>
+  </li>
+      </ul>
+    </div>
+
+    </script>
+
+  <div id="main-wrap" ng-controller = "mainCtrl">
+    <div id="sidebar">
+      <div class="profilePhoto"> 
+    <!-- Profile photo --> 
+    <img  id = "personalImg" src="images/personal.jpg" alt="sample"> </div>
+    
+    </div>
+        <div class ="navigation">
+          <ul id="navigation_bar" style="list-style-type: disc">
+            <li id="tabs" ng-repeat= "i in items " scroll-on-click ng-style="personColour" ng-mouseenter="changeColor(i,true)" ng-mouseleave="changeColor(i,false)">
+              <button id = "nav_but" type="button" class  ="btn btn-default" ng-click="testDis($index)">{{i}}</button>
+            </li>
+          </ul>
+  
+
+    </div>
+    <div class="slide-animate"  id="content-wrap" ng-include = "fileName">    
+    </div>
+  </div>
+  <div id="footer">Footer</div>
+
+
+
+
+
 </body>
 </html>
