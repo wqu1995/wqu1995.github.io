@@ -18,7 +18,7 @@ app.controller('coverCtrl', function($scope, $uibModal){
 
 app.controller('mainCtrl', function($uibModal, $log, $document, $scope, $location, $http){
 	$scope.fileName = 'aboutMe.html';
-		$scope.items = ['About Me', 'Resume', 'Projects', 'Skills', 'CSE 300', 'Contact Me'];
+		$scope.items = ['About Me', 'Resume', 'Projects', 'Skills', 'Contact Me'];
 
 	$scope.changeColor = function(item, bool){
 		if(bool === true){
