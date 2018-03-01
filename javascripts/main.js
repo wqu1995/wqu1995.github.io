@@ -52,9 +52,6 @@ app.controller('mainCtrl', function($uibModal, $log, $document, $scope, $locatio
 			$scope.fileName = 'skill.html';
 		}
 		else if(index ===4){
-			$scope.fileName = 'CSE300.html';
-		}
-		else if(index ===5){
 						      var parentElem = parentSelector ? 
         angular.element($document[0].querySelector('.modal-demo ' + parentSelector)) : undefined;
        createGroupModal = $uibModal.open({
